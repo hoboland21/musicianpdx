@@ -66,7 +66,13 @@ MIT
 @angular/router
 MIT
 
+@ngrx/data
+MIT
+
 @ngrx/effects
+MIT
+
+@ngrx/entity
 MIT
 
 @ngrx/router-store
