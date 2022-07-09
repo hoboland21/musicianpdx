@@ -1,0 +1,28 @@
+
+#RewriteEngine on
+#RewriteCond %{HTTPS} off
+#RewriteCond %{HTTP:X-Forwarded-SSL} !on
+#RewriteCond %{HTTP_HOST} ^musicianpdx\.com$ [OR]
+#RewriteCond %{HTTP_HOST} ^www\.musicianpdx\.com$
+#RewriteRule ^(.*)$ "https\:\/\/musicianpdx\.com\/$1" [R=301,L]
+
+
+RewriteEngine On
+# For existing assets or directories, no redirection is required
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+RewriteRule ^ - [L]
+# if the requested resource doesn't exist, use index.html
+RewriteRule ^ /index.html
+
+
+
+
+  # If the requested resource doesn't exist, use index.html 
+
+# RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR] 
+# RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d 
+
+
+
+#RewriteRule ^ /index.html
